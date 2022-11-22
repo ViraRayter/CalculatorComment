@@ -63,122 +63,122 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  if s = '0' then s := '1'
-  else s := s + '1';
-  Edit1.Text := s;
+  if s = '0' then s := '1' //заполнение численного значения
+  else s := s + '1'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  if s = '0' then s := '2'
-  else s := s + '2';
-  Edit1.Text := s;
+  if s = '0' then s := '2' //заполнение численного значения
+  else s := s + '2'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
-  if s = '0' then s := '3'
-  else s := s + '3';
-  Edit1.Text := s;
+  if s = '0' then s := '3' //заполнение численного значения
+  else s := s + '3'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
-  if s = '0' then s := '4'
-  else s := s + '4';
-  Edit1.Text := s;
+  if s = '0' then s := '4' //заполнение численного значения
+  else s := s + '4'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);
 begin
-  if s = '0' then s := '5'
-  else s := s + '5';
-  Edit1.Text := s;
+  if s = '0' then s := '5' //заполнение численного значения
+  else s := s + '5'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button6Click(Sender: TObject);
 begin
-  if s = '0' then s := '6'
-  else s := s + '6';
-  Edit1.Text := s;
+  if s = '0' then s := '6' //заполнение численного значения
+  else s := s + '6'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button7Click(Sender: TObject);
 begin
-  if s = '0' then s := '7'
-  else s := s + '7';
-  Edit1.Text := s;
+  if s = '0' then s := '7' //заполнение численного значения
+  else s := s + '7'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button8Click(Sender: TObject);
 begin
-  if s = '0' then s := '8'
-  else s := s + '8';
-  Edit1.Text := s;
+  if s = '0' then s := '8' //заполнение численного значения
+  else s := s + '8'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button9Click(Sender: TObject);
 begin
-  if s = '0' then s := '9'
-  else s := s + '9';
-  Edit1.Text := s;
+  if s = '0' then s := '9' //заполнение численного значения
+  else s := s + '9'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button10Click(Sender: TObject);
 begin
-  if s = '0' then s := '0'
-  else s := s + '0';
-  Edit1.Text := s;
+  if s = '0' then s := '0' //заполнение численного значения
+  else s := s + '0'; //добавляем цифру к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 procedure TForm1.Button12Click(Sender: TObject);
 begin
-  operator := '*';
-  if a = 0 then a := StrToFloat(s);
-  s := '';
+  operator := '*'; // выбор операции
+  if a = 0 then a := StrToFloat(s); // сохранение численного значения
+  s := ''; // стираем первое число
 end;
 
 procedure TForm1.Button13Click(Sender: TObject);
 begin
-  operator := '/';
-  if a = 0 then a := StrToFloat(s);
-  s := '';
+  operator := '/';  // выбор операции 
+  if a = 0 then a := StrToFloat(s); // сохранение численного значения
+  s := ''; // стираем первое число
 end;
 
 procedure TForm1.Button14Click(Sender: TObject);
 begin
-  operator := '+';
-  if a = 0 then a := StrToFloat(s);
-  s := '';
+  operator := '+'; // выбор операции
+  if a = 0 then a := StrToFloat(s); // сохранение численного значения
+  s := ''; // стираем первое число
 end;
 
 procedure TForm1.Button15Click(Sender: TObject);
 begin
-  operator := '-';
-  if a = 0 then a := StrToFloat(s);
-  s := '';
+  operator := '-'; // выбор операции
+  if a = 0 then a := StrToFloat(s); // сохранение численного значения
+  s := ''; // стираем первое число
 end;
 
 procedure TForm1.Button18Click(Sender: TObject);
 begin
   s := Edit1.Text;
-  b := StrToFloat(s);
+  b := StrToFloat(s); // сохранение второго числа
   case operator of
     '*': c := a * b;
     '/': begin
-           if b = 0 then ShowMessage('Error')
+           if b = 0 then ShowMessage('Error') // запрет деления на ноль
            else c := a / b;
          end;
     '+': c := a + b;
-    '-': c := a - b;
+    '-': c := a - b; //проведение операции
   end;
-  Edit1.Text := FloatToStr(c);
-  a := c;
-  s := '';
+  Edit1.Text := FloatToStr(c);// запись ответа
+  a := c; //соранение ответа в переменную
+  s := '';//обнуления 
 end;
 
 procedure TForm1.Button16Click(Sender: TObject);
-begin
+begin //обнуляем все числа
   s := '0';
   Edit1.Text := s;
   a := 0;
@@ -188,18 +188,18 @@ end;
 
 procedure TForm1.Button17Click(Sender: TObject);
 begin
-  s := Edit1.Text;
-  a := StrToFloat(s) * (-1);
+  s := Edit1.Text; //добавление минуса к числу
+  a := StrToFloat(s) * (-1); //меняем значение на отрицательное
   s := FloatToStr(a);
-  Edit1.Text := s;
+  Edit1.Text := s; //записание числа в строковую переменную
   s := '';
 end;
 
 procedure TForm1.Button11Click(Sender: TObject);
 begin
-  if TryStrToFloat(s + ',', d) then
-  s := s + ',';
-  Edit1.Text := s;
+  if TryStrToFloat(s + ',', d) then //заполнение запятой в значение
+  s := s + ','; //добавляем запятую к числу
+  Edit1.Text := s; //записание числа в строковую переменную
 end;
 
 end.
